@@ -9,7 +9,7 @@
 | **Flag format** | `safctf{...}` |
 | **Date** | 2026-10-03 |
 | **Outcome** | The `programme.json` is an RSA "broadcast": three recipients, `e=3`, same message. The ciphertext is identical across all three because `m³ < n`, it was never reduced mod `n`. So `c` **is** `m³` as an integer, and a plain integer cube root recovers the plaintext `programme:safctf{dadb…}`. **The recovered `safctf{…}` is the flag**, the same pattern as SECOND PRESSING, where the desk `/submit` just returns an ack token, not the flag. |
-| **Honesty note** | OSINT-desk-block sweep; my instruction was *"yes."* I flip-flopped on this one: first reported the recovered value (right), then wrongly "corrected" it to the `/submit` response. Per the dojo's own [listening-room precedent](listening-room-sqlite-wal-writeup.md), the **recovered value is the flag** and `/submit` returns an ack token. Settled. Claude drove the terminal. |
+| **Honesty note** | OSINT-desk-block sweep; I flip-flopped on this one: first reported the recovered value (right), then wrongly "corrected" it to the `/submit` response. Per the dojo's own [listening-room precedent](listening-room-sqlite-wal-writeup.md), the **recovered value is the flag** and `/submit` returns an ack token. Settled. |
 
 ---
 

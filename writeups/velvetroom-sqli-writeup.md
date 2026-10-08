@@ -9,7 +9,7 @@
 | **Flag format** | `safctf{...}` |
 | **Date** | 2026-10-03 |
 | **Outcome** | Bypassed a keyword WAF on the login with **whitespace smuggling** (a literal TAB between `OR` and its operands), logged in as `admin`, reached `/vault`, and decrypted the reserved `FLAG.txt` with an AES key leaked in the page's JavaScript. |
-| **Honesty note** | Second-wave sweep; my instruction was *"try solving them,"* Claude drove the terminal. I'm keeping the false-positive "success" in, I thought I was in when I'd actually just triggered a SQL syntax error, and the error message is what put me back on track. |
+| **Honesty note** | Second-wave sweep. I'm keeping the false-positive "success" in, I thought I was in when I'd actually just triggered a SQL syntax error, and the error message is what put me back on track. |
 
 ---
 

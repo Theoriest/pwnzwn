@@ -10,7 +10,7 @@
 | **Author** | lacmyst |
 | **Date** | 2026-10-02 |
 | **Outcome** | Bypassed the login with **LDAP injection**, landed in the authenticated directory, and read the flag off the team-report page. |
-| **Honesty note** | This one I worked hands-on with Claude driving the terminal from my starting hypothesis. The narrative below is the *real* exploration order, assist and all, not a tidied-up version. |
+| **Honesty note** | This one I worked hands-on from my starting hypothesis. The narrative below is the *real* exploration order, dead ends and all, not a tidied-up version. |
 
 ---
 

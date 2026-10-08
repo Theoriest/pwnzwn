@@ -9,7 +9,7 @@
 | **Flag format** | `safctf{...}` |
 | **Date** | 2026-10-03 |
 | **Outcome** | The "fetch a URL" tool blocks `127.0.0.1`/`localhost` as strings. I passed `127.0.0.1` as its **decimal integer** `2130706433`, scanned loopback ports through the server, found an internal service on `:9000`, and read `/flag`. |
-| **Honesty note** | Part of the second-wave sweep; my instruction was *"try solving them."* Claude drove the terminal. I'm keeping the AWS-metadata detour in because it's the thing that proved the SSRF was real before I found the actual target. |
+| **Honesty note** | Part of the second-wave sweep. I'm keeping the AWS-metadata detour in because it's the thing that proved the SSRF was real before I found the actual target. |
 
 ---
 

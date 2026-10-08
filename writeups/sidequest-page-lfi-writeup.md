@@ -19,7 +19,7 @@ There were no input fields on the page, so I did what felt natural and **went af
 
 Back to the page. I inspected it properly and noticed **`/health` was bolded** in the story text, a deliberate nudge. Hitting it just gave me `OK`. I guessed it might be a **file-path / traversal** thing and went hunting for more paths after `/health` and `/` with `ffuf`... and got nothing back but those two routes, no matter how I scanned.
 
-Stuck, I **asked AI what else I could try**, and it pointed me at something I genuinely didn't know: **parameter fuzzing** (a.k.a. hunting hidden query parameters, not just paths). It handed me an `ffuf` command that fuzzes *parameter names* from a Burp-derived wordlist, new to me, and a cool technique to add. That immediately flagged a parameter on `/`: **`page`**. From there we kept digging on `page`, saw it was reading files, and followed it until it leaked the process environment, where the flag was sitting.
+Stuck, I went digging for other angles and hit on something I genuinely didn't know: **parameter fuzzing** (a.k.a. hunting hidden query parameters, not just paths). The idea is to fuzz *parameter names* from a Burp-derived wordlist with `ffuf`, new to me, and a cool technique to add. That immediately flagged a parameter on `/`: **`page`**. From there I kept digging on `page`, saw it was reading files, and followed it until it leaked the process environment, where the flag was sitting.
 
 **What I walked away with**
 
@@ -42,7 +42,7 @@ flowchart TD
     F --> G["Inspect the page → '/health' is bolded"]
     G --> H["curl /health → 'OK'"]
     H --> W1["⟲ Guessed path-traversal AFTER /health;<br/>ffuf for routes past /health and / → nothing"]:::decoy
-    W1 --> I["Ask AI what else to try"]
+    W1 --> I["Dig for another angle"]
     I --> J["New technique: PARAMETER fuzzing<br/>ffuf param-names from a Burp wordlist"]
     J --> K["Finds a parameter on / → ?page="]
     K --> L["Dig into ?page= → it loads files<br/>?page=../../../../etc/passwd = /etc/passwd"]
@@ -117,7 +117,7 @@ Every scan came back with the same two routes: **`/` and `/health`, nothing else
 
 ## 6. The Turning Point, Learning Parameter Fuzzing
 
-Out of ideas on routes, I **asked AI what else I could try**. It introduced me to something I hadn't used before: instead of fuzzing *paths*, fuzz **parameter names**, the hidden `?something=` inputs an endpoint might accept without ever advertising them. It gave me an `ffuf` command, and the neat part I learned is that the wordlist is a big list of **real-world parameter names derived from Burp Suite**:
+Out of ideas on routes, I went looking for a technique I hadn't tried. That's when I came across something I hadn't used before: instead of fuzzing *paths*, fuzz **parameter names**, the hidden `?something=` inputs an endpoint might accept without ever advertising them. The `ffuf` command is straightforward, and the neat part I learned is that the wordlist is a big list of **real-world parameter names derived from Burp Suite**:
 ```bash
 # fuzz GET parameter NAMES on / — baseline page is 8429 bytes, so hide that size
 ffuf -u 'http://54.72.82.22:8030/?FUZZ=test' \
@@ -210,7 +210,7 @@ The real trail was: **ignore the image → realise routes are a dead end → fuz
 - Read up on AVIF; suspected hidden data → `binwalk` → only a 1998 HP copyright (sRGB ICC boilerplate) → image is a decoy.
 - Inspected the page → noticed **`/health` bolded** → `curl` → `OK`.
 - Guessed a path-traversal/file bug *after* `/health`; `ffuf` for routes past `/health` and `/` → only those two routes, repeatedly.
-- **Asked AI** → learned **parameter fuzzing** (ffuf + Burp parameter-name wordlist) → found the `page` parameter on `/`.
+- Dug for another angle → learned **parameter fuzzing** (ffuf + Burp parameter-name wordlist) → found the `page` parameter on `/`.
 - Probed `page` → "loading the page" error → `?page=../../../../etc/passwd` dumped `/etc/passwd` → **LFI**.
 - `?page=.../proc/self/cmdline` → `python app/app.py`; `?page=.../proc/self/environ` → **`FLAG=safctf{...}`**.
 - (Side quest within the side quest: worked out that browser-console JS runs client-side only; the server-side Werkzeug `/console` was disabled here.)

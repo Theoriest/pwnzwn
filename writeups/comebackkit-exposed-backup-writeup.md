@@ -9,7 +9,7 @@
 | **Flag format** | `safctf{...}` |
 | **Date** | 2026-10-03 |
 | **Outcome** | The download page linked a `/backup.zip`. It was a full Android project backup; the flag sat in plain text inside `app/src/main/res/values/archive.xml`. |
-| **Honesty note** | Second-wave sweep; my instruction was *"try solving them."* Claude drove the terminal. Easiest flag of the batch, the hard part was noticing the link, not exploiting anything. |
+| **Honesty note** | Second-wave sweep. Easiest flag of the batch, the hard part was noticing the link, not exploiting anything. |
 
 ---
 

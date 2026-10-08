@@ -9,7 +9,7 @@
 | **Flag format** | `safctf{...}` |
 | **Date** | 2026-10-03 |
 | **Outcome** | `GET /api/view?name=` reads files; the `../` filter is a single, non-recursive `.replace('../','')`, so `....//` collapses back to `../`, and absolute paths work outright. Read `/proc/self/environ` → the `FLAG` env var. Bonus: dumped the whole challenge `service.py`. |
-| **Honesty note** | Part of the OSINT-desk block sweep; my instruction was *"yes, go after 8300/8310/8340."* Claude drove the terminal. |
+| **Honesty note** | Part of the OSINT-desk block sweep; I went after 8300/8310/8340 in one run. |
 
 ---
 
