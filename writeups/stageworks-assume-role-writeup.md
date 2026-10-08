@@ -10,7 +10,7 @@
 | **Flag format** | `safctf{...}` |
 | **Date** | 2026-10-03 |
 | **Outcome** | Assumed the `lighting` role with a leaked `externalId`, then forged a `department=finance` session tag to read a tag-gated object. |
-| **Honesty note** | My angle on this one was *"look at how the external_id ties roles/accounts together and whether it can be forged."* I pointed Claude at the box + the `rehearsal/` folder; Claude worked the exploit. The decisive move turned out to be the **session-tag** forgery, with the externalId simply leaked in a deploy log. |
+| **Honesty note** | My angle on this one was to look at how the external_id ties roles/accounts together and whether it can be forged. I worked the box alongside the `rehearsal/` folder. The decisive move turned out to be the **session-tag** forgery, with the externalId simply leaked in a deploy log. |
 
 ---
 

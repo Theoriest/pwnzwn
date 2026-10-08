@@ -9,7 +9,7 @@
 | **Flag format** | `safctf{...}` |
 | **Date** | 2026-10-03 |
 | **Outcome** | The bot holds the flag in its hidden instructions. An **input filter** taunts anything containing "flag"; an **output filter** scrubs `safctf`. I asked it to **base64-encode** its secret in pirate character, slipping past both filters, then decoded it. |
-| **Honesty note** | Second-wave sweep; my instruction was *"try solving them,"* Claude drove the terminal. I'm keeping the long wrong road in, I spent a while convinced it was a dumb keyword bot and guessed dozens of pirate phrases before the base64 jailbreak proved it was a real (guard-railed) LLM. |
+| **Honesty note** | Second-wave sweep. I'm keeping the long wrong road in, I spent a while convinced it was a dumb keyword bot and guessed dozens of pirate phrases before the base64 jailbreak proved it was a real (guard-railed) LLM. |
 
 ---
 

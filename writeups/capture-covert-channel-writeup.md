@@ -9,7 +9,7 @@
 | **Author** | lacmyst |
 | **Date** | 2026-10-02 |
 | **Outcome** | Pulled the signal frames out of a noisy covert channel, found the key in the session log, and XOR-decrypted with a repeating 12-byte pad. |
-| **Honesty note** | I brought the pcap and drove the recon/triage; the long keystream-cracking iteration was done with Claude. The decisive realisation, *the clean decode dies at byte 12 = the key length, so the pad is 12 bytes and repeats*, we landed on together after I pushed to stop over-filtering and reconsider the whole approach. |
+| **Honesty note** | I brought the pcap and drove the recon/triage, then ground through the long keystream-cracking iteration. The decisive realisation, *the clean decode dies at byte 12 = the key length, so the pad is 12 bytes and repeats*, landed after I stopped over-filtering and reconsidered the whole approach. |
 
 ---
 

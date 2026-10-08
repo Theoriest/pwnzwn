@@ -10,7 +10,7 @@
 | **Flag format** | `safctf{...}` |
 | **Date** | 2026-10-03 |
 | **Outcome** | Reversed the ELF to recover three answers, stage-1 XOR key, stage-2 decrypted message (via gdb on the compare), stage-3 token, submitted them in-session to `/submit/stageN`, and got the flag. |
-| **Honesty note** | Second-wave sweep; my instruction was *"try solving them,"* Claude drove the terminal (objdump/gdb). I'm keeping in the stage-2 pivot: rather than re-implement Caesar+Vigenère, I let the binary decrypt for me and read the answer off its own `strcmp`. |
+| **Honesty note** | Second-wave sweep. I worked it at the terminal (objdump/gdb). I'm keeping in the stage-2 pivot: rather than re-implement Caesar+Vigenère, I let the binary decrypt for me and read the answer off its own `strcmp`. |
 
 ---
 

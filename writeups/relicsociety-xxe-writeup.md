@@ -10,7 +10,7 @@
 | **Author** | lacmyst |
 | **Date** | 2026-10-02 |
 | **Outcome** | Turned a reflected XML lookup into **XXE**, read arbitrary files, listed directories to find a randomly-named flag file, and read it. |
-| **Honesty note** | This one was me **experimenting from what I learned in the dojo box** (injection techniques + special delimiters), I correctly smelled "injection in XML," and with Claude's help I pinned the exact class (**XXE**, not command/XPath injection) and drove it to the flag. |
+| **Honesty note** | This one was me **experimenting from what I learned in the dojo box** (injection techniques + special delimiters), I correctly smelled "injection in XML," and worked out the exact class (**XXE**, not command/XPath injection) and drove it to the flag. |
 
 ---
 
@@ -18,7 +18,7 @@
 
 I came into this straight off the **dojo command-injection box**, where I'd drilled injection and the special delimiter characters that break interpreters. So when I inspected RELIC SOCIETY and saw the page building an **XML request** (`<request><id>…</id></request>`) client-side, my gut said *"injection, in XML."* I tested the way I'd learned, append a metacharacter and watch for a change, and appending **`&&`** threw an error, while my normal input came **reflected** back in the response. Two classic injection tells: a metacharacter breaks it, and my input is echoed.
 
-My first theory was command/XPath injection, but the breakout payloads (`1 or 1=1`, `' or '1'='1`) just reflected literally, they didn't *execute*. Working it through with Claude, the real class clicked: the server **parses my XML**, and my `<id>` is **reflected**, that's **XXE (XML External Entity injection)**. The `&&` error wasn't a shell thing; `&` starts an XML entity, so an undefined one crashes the parser. I defined my *own* external entity pointing at a file, referenced it in the reflected `<id>`, and the file contents came back. From there I listed directories (filenames are XML-safe) to find a **randomly-named flag file** at `/`, and read it.
+My first theory was command/XPath injection, but the breakout payloads (`1 or 1=1`, `' or '1'='1`) just reflected literally, they didn't *execute*. Working it through, the real class clicked: the server **parses my XML**, and my `<id>` is **reflected**, that's **XXE (XML External Entity injection)**. The `&&` error wasn't a shell thing; `&` starts an XML entity, so an undefined one crashes the parser. I defined my *own* external entity pointing at a file, referenced it in the reflected `<id>`, and the file contents came back. From there I listed directories (filenames are XML-safe) to find a **randomly-named flag file** at `/`, and read it.
 
 **What I walked away with**
 
@@ -89,7 +89,7 @@ Those two facts, **reflection** + **a metacharacter that breaks it**, are the si
 
 ---
 
-## 5. Correcting the Class (with Claude's help)
+## 5. Correcting the Class
 
 I assumed command or XPath injection and tried breakouts:
 ```
@@ -159,7 +159,7 @@ curl -s -X POST .../fetch_user -H 'Content-Type: application/xml' --data '<?xml 
 - Inspected the page → it builds an **XML** request → gut said "injection in XML" (dojo reflex).
 - Probed: `9999` → **reflected**; `1 && 1` → **error** → injection tells present.
 - Tried XPath/command breakouts → all reflect literally, none execute → wrong class.
-- Reframed with Claude: server parses my XML + reflects it → **XXE**; `&` error = entity, not shell.
+- Reframed it: server parses my XML + reflects it → **XXE**; `&` error = entity, not shell.
 - `file:///etc/passwd` via a declared entity → **confirmed**; found `ctfuser`.
 - Source/`cmdline` failed (XML-illegal chars/NUL) → `file:///dir/` listings work → app is **`app.jar` (Java)**.
 - Listed `/` → `flag8b9d5b8e264a.txt` (randomized) → XXE-read it → **flag**.

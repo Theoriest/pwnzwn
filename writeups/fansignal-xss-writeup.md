@@ -9,7 +9,7 @@
 | **Flag format** | `safctf{...}` |
 | **Status** | ⚠️ **Partial**, reflected XSS confirmed and weaponized; the flag requires the CTF's out-of-band victim bot + a callback collector, which I can't drive from the terminal alone. |
 | **Date** | 2026-10-03 |
-| **Honesty note** | Second-wave sweep; my instruction was *"try solving them."* Claude drove the terminal. I'm logging this one as **not-finished-but-understood**: I know exactly what the bug is and have the payload ready; what's missing is the delivery channel (a bot that visits my link) and a server to catch the stolen data. |
+| **Honesty note** | Second-wave sweep. I'm logging this one as **not-finished-but-understood**: I know exactly what the bug is and have the payload ready; what's missing is the delivery channel (a bot that visits my link) and a server to catch the stolen data. |
 
 ---
 

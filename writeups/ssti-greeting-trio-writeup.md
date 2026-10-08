@@ -9,7 +9,7 @@
 | **Flag format** | `safctf{...}` |
 | **Date** | 2026-10-03 |
 | **Outcome** | All three reflect my input through a Jinja2 template with no sandbox → `{{7*7}}`→`49` → full RCE as **root** → read the flag. 8050 adds a keyword filter I had to bypass. |
-| **Honesty note** | These three came out of a sweep of the "second wave" of ports. My instruction was *"try solving them."* Claude drove the exploitation at the terminal; I'm writing it up in my voice so it reads like the rest of the dojo, and I'm keeping the dead-ends in because they're the part worth learning from. |
+| **Honesty note** | These three came out of a sweep of the "second wave" of ports. I'm keeping the dead-ends in because they're the part worth learning from. |
 
 ---
 

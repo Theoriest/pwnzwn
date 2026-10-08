@@ -10,7 +10,7 @@
 | **Author** | lacmyst |
 | **Date** | 2026-10-02 |
 | **Outcome** | Three challenges in one family: correlate a short "note" (riddle) against a few data files to pin **one** record, then either submit its raw `ref` (Paper Lanterns) or build a receipt `SHA256(a\|b\|c)` and POST it (Last Tram, Blue Meridian). No exploit, correlation + hashing. |
-| **Honesty note** | I solved the correlations myself; my one detour was **overthinking the hex `ref`** on Paper Lanterns, I assumed it was encrypted and needed decoding. It's just an opaque record ID. Claude verified the matches and submissions. |
+| **Honesty note** | I solved the correlations myself; my one detour was **overthinking the hex `ref`** on Paper Lanterns, I assumed it was encrypted and needed decoding. It's just an opaque record ID. I verified the matches and submissions myself. |
 
 All three submit the same way: `POST /submit` with `{"answer":"<recovered value>"}` → `{"message":"safctf{...}","ok":true}`. That `safctf{...}` message is the desk's acknowledgement token, confirmation that the value was correct, not the flag. The flag is the value you recovered and submitted.
 

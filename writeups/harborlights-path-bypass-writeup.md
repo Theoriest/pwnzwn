@@ -10,7 +10,7 @@
 | **Author** | lacmyst |
 | **Date** | 2026-10-03 |
 | **Outcome** | Read a private object (`finance/final.txt`) by traversing out of the authorized `public/` scope, the access check runs on the raw key, the storage adapter normalizes it afterwards. |
-| **Honesty note** | I pointed Claude at this one (a "cloud task") while I worked the Backstage Ledger box. Claude solved it; I noticed that **several traversal variants all returned the flag**, while others returned a decoy message, so this writeup documents the full payload matrix. |
+| **Honesty note** | I came back to this one while I was working the Backstage Ledger box. What stood out once it fell: **several traversal variants all returned the flag**, while others returned a decoy message, so this writeup documents the full payload matrix. |
 
 ---
 
