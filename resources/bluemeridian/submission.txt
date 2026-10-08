@@ -1,0 +1,1 @@
+Receipt format: SHA256(voyage_ref|station_ref|UTC_time), lowercase hex. UTC_time uses HH:MMZ.

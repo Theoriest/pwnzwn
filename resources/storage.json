@@ -1,0 +1,9 @@
+{
+  "scope": "public/*",
+  "inventory": [
+    "public/lineup.txt",
+    "public/receipts.json",
+    "finance/final.txt"
+  ],
+  "adapter": "edge-store/4"
+}

@@ -1,0 +1,1 @@
+Collection receipt format: SHA256(venue_ref|event_ref|UTC_date), lowercase hex.

@@ -1,0 +1,290 @@
+[
+  {
+    "ref": "97b41b7510",
+    "name": "House 1",
+    "district": "North",
+    "opened": 1980,
+    "roof": "copper",
+    "seats": 120
+  },
+  {
+    "ref": "dafc82a0b8",
+    "name": "House 2",
+    "district": "East",
+    "opened": 1981,
+    "roof": "slate",
+    "seats": 131
+  },
+  {
+    "ref": "9bb265443a",
+    "name": "House 3",
+    "district": "South",
+    "opened": 1982,
+    "roof": "glass",
+    "seats": 142
+  },
+  {
+    "ref": "a3ddce4850",
+    "name": "House 4",
+    "district": "West",
+    "opened": 1983,
+    "roof": "copper",
+    "seats": 153
+  },
+  {
+    "ref": "f13b062881",
+    "name": "House 5",
+    "district": "North",
+    "opened": 1984,
+    "roof": "slate",
+    "seats": 164
+  },
+  {
+    "ref": "89028f1d15",
+    "name": "House 6",
+    "district": "East",
+    "opened": 1985,
+    "roof": "glass",
+    "seats": 175
+  },
+  {
+    "ref": "d5915cbf78",
+    "name": "House 7",
+    "district": "South",
+    "opened": 1986,
+    "roof": "copper",
+    "seats": 186
+  },
+  {
+    "ref": "4d58801424",
+    "name": "House 8",
+    "district": "West",
+    "opened": 1987,
+    "roof": "slate",
+    "seats": 197
+  },
+  {
+    "ref": "ba76446f44",
+    "name": "House 9",
+    "district": "North",
+    "opened": 1988,
+    "roof": "glass",
+    "seats": 208
+  },
+  {
+    "ref": "24b3b8ee93",
+    "name": "House 10",
+    "district": "East",
+    "opened": 1989,
+    "roof": "copper",
+    "seats": 219
+  },
+  {
+    "ref": "8a86891e5a",
+    "name": "House 11",
+    "district": "South",
+    "opened": 1990,
+    "roof": "slate",
+    "seats": 230
+  },
+  {
+    "ref": "097b1ad726",
+    "name": "House 12",
+    "district": "West",
+    "opened": 1991,
+    "roof": "glass",
+    "seats": 241
+  },
+  {
+    "ref": "a79f1bc36e",
+    "name": "House 13",
+    "district": "North",
+    "opened": 1992,
+    "roof": "copper",
+    "seats": 252
+  },
+  {
+    "ref": "2c33e568f7",
+    "name": "House 14",
+    "district": "East",
+    "opened": 1993,
+    "roof": "slate",
+    "seats": 263
+  },
+  {
+    "ref": "56221ccda7",
+    "name": "House 15",
+    "district": "South",
+    "opened": 1994,
+    "roof": "glass",
+    "seats": 274
+  },
+  {
+    "ref": "2d38503edb",
+    "name": "House 16",
+    "district": "West",
+    "opened": 1995,
+    "roof": "copper",
+    "seats": 285
+  },
+  {
+    "ref": "8911253ba7",
+    "name": "House 17",
+    "district": "North",
+    "opened": 1996,
+    "roof": "slate",
+    "seats": 296
+  },
+  {
+    "ref": "b59c881fc2",
+    "name": "House 18",
+    "district": "East",
+    "opened": 1997,
+    "roof": "glass",
+    "seats": 307
+  },
+  {
+    "ref": "d34c5aa107",
+    "name": "House 19",
+    "district": "South",
+    "opened": 1998,
+    "roof": "copper",
+    "seats": 318
+  },
+  {
+    "ref": "ad188bc8ee",
+    "name": "House 20",
+    "district": "West",
+    "opened": 1999,
+    "roof": "slate",
+    "seats": 329
+  },
+  {
+    "ref": "a2c48e6977",
+    "name": "House 21",
+    "district": "North",
+    "opened": 2000,
+    "roof": "glass",
+    "seats": 340
+  },
+  {
+    "ref": "8acde61c57",
+    "name": "House 22",
+    "district": "East",
+    "opened": 2001,
+    "roof": "copper",
+    "seats": 351
+  },
+  {
+    "ref": "47962580e7",
+    "name": "House 23",
+    "district": "South",
+    "opened": 2002,
+    "roof": "slate",
+    "seats": 362
+  },
+  {
+    "ref": "42f08d5ef5",
+    "name": "House 24",
+    "district": "West",
+    "opened": 2003,
+    "roof": "glass",
+    "seats": 373
+  },
+  {
+    "ref": "73f63fcebb",
+    "name": "House 25",
+    "district": "North",
+    "opened": 2004,
+    "roof": "copper",
+    "seats": 384
+  },
+  {
+    "ref": "aaed1297aa",
+    "name": "House 26",
+    "district": "East",
+    "opened": 2005,
+    "roof": "slate",
+    "seats": 395
+  },
+  {
+    "ref": "d79322a184",
+    "name": "House 27",
+    "district": "South",
+    "opened": 2006,
+    "roof": "glass",
+    "seats": 406
+  },
+  {
+    "ref": "3a3ddefa8f",
+    "name": "House 28",
+    "district": "West",
+    "opened": 2007,
+    "roof": "copper",
+    "seats": 417
+  },
+  {
+    "ref": "164bec2828",
+    "name": "House 29",
+    "district": "North",
+    "opened": 2008,
+    "roof": "slate",
+    "seats": 428
+  },
+  {
+    "ref": "922dc711cc",
+    "name": "House 30",
+    "district": "East",
+    "opened": 2009,
+    "roof": "glass",
+    "seats": 439
+  },
+  {
+    "ref": "56132e83a4",
+    "name": "House 31",
+    "district": "South",
+    "opened": 2010,
+    "roof": "copper",
+    "seats": 450
+  },
+  {
+    "ref": "9109fc65f3",
+    "name": "House 32",
+    "district": "West",
+    "opened": 2011,
+    "roof": "slate",
+    "seats": 461
+  },
+  {
+    "ref": "9f566dd82a",
+    "name": "House 33",
+    "district": "North",
+    "opened": 2012,
+    "roof": "glass",
+    "seats": 472
+  },
+  {
+    "ref": "e7101be098",
+    "name": "House 34",
+    "district": "East",
+    "opened": 2013,
+    "roof": "copper",
+    "seats": 483
+  },
+  {
+    "ref": "61c56dc3e2",
+    "name": "House 35",
+    "district": "South",
+    "opened": 2014,
+    "roof": "slate",
+    "seats": 494
+  },
+  {
+    "ref": "7e9f5bc1d8",
+    "name": "House 36",
+    "district": "West",
+    "opened": 2015,
+    "roof": "glass",
+    "seats": 505
+  }
+]
